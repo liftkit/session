@@ -27,7 +27,7 @@
 		public function testSetGetUnsetSession ()
 		{
 			$this->session['value3'] = 3;
-			
+
 			$this->assertEquals(
 				3,
 				$this->session['value3']
