@@ -16,7 +16,7 @@
 		}
 
 
-		public function start ()
+		public function start ($name)
 		{
 			$_SESSION = array();
 		}
