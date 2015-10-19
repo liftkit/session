@@ -24,12 +24,12 @@
 			}
 
 			if (! isset($_SESSION)) {
-				if (! headers_sent()) {
+				if (! headers_sent($file, $line)) {
 			    	if (! session_start()) {
 			           throw new SessionException(__METHOD__ . ' session_start failed.');
 			        }
 				} else {
-					throw new SessionException(__METHOD__ . ' Session started after headers sent.');
+					throw new SessionException(__METHOD__ . ' session started after headers sent. Output began at: ' . $file . ':' . $line);
 				}
 			}
 		}
