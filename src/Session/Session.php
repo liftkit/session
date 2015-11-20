@@ -41,7 +41,7 @@
 		}
 
 
-		public function offsetGet ($variable)
+		public function & offsetGet ($variable)
 		{
 			return $_SESSION[$variable];
 		}
