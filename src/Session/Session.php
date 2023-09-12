@@ -35,24 +35,28 @@
 		}
 
 
+		#[\ReturnTypeWillChange]
 		public function offsetExists ($variable)
 		{
 			return isset($_SESSION[$variable]);
 		}
 
 
+		#[\ReturnTypeWillChange]
 		public function & offsetGet ($variable)
 		{
 			return $_SESSION[$variable];
 		}
 
 
+		#[\ReturnTypeWillChange]
 		public function offsetSet ($variable, $value)
 		{
 			$_SESSION[$variable] = $value;
 		}
 
 
+		#[\ReturnTypeWillChange]
 		public function offsetUnset ($variable)
 		{
 			unset($_SESSION[$variable]);
